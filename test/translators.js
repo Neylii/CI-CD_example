@@ -10,6 +10,14 @@ describe("Translators", function () {
             assert.strictEqual(toRobber("Hejsan hoppsan!"), "Hohejojsosanon hohopoppopsosanon!")
         })
     })
+    describe("#toAllsprak", function () {
+        it("should work for empty string", function () {
+            assert.strictEqual(toAllsprak(""), "")
+        })
+        it("should work for simple input", function () {
+            assert.strictEqual(toAllsprak("s"), "sall")
+        })
+    })
     describe("#toNormal", function () {
         it("should work for empty string", function () {
             assert.strictEqual(toNormal(""), "")
